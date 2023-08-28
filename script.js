@@ -28,5 +28,5 @@ const submitForm = (event) => {
 }
 
 userForm.addEventListener("submit", submitForm);
-background.addEventListener("change", setBackgroundColor, false);
+background.addEventListener("change", setBackgroundColor);
 textColor.addEventListener("change", setTextColor)
