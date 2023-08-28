@@ -18,7 +18,11 @@
   <body>
     <div class="container">
       <h1>Fill In Your Data As A GeekForce Team Member.</h1>
-      <form id="userForm">
+      <label for="bg"> change table background: 
+         <input type="color" name="bg" id="bg">
+      </label>
+      <br><br>
+      <form id="userForm" name="users">
         <label for="firstname">
             <input type="text" name="firstname" id="firstname" placeholder="your firstname" required>
         </label>
@@ -32,7 +36,7 @@
             <input type="email" name="email" id="email" placeholder="your email" required>
         </label>
         <label for="location">
-            <input type="location" name="location" id="email" placeholder="your state/location" required>
+            <input type="location" name="location" id="location" placeholder="your state/location" required>
         </label>
         <button id="submit">Submit</button>
       </form>
