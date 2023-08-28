@@ -3,13 +3,18 @@ const userForm = document.getElementById("userForm");
 const membersTable = document.getElementById("membersList");
 const submit = document.getElementById("submit");
 const background = document.getElementById("bg");
+const textColor = document.getElementById("textColor");
 
 let formData = new FormData(userForm);
 let geekForm = document.forms["users"];
 
 
-const getColor = (event) => {
+const setBackgroundColor = (event) => {
     membersTable.style.backgroundColor = event.target.value;
+}
+
+const setTextColor = (event) => {
+    membersTable.style.color = event.target.value;
 }
 
 
@@ -23,4 +28,5 @@ const submitForm = (event) => {
 }
 
 userForm.addEventListener("submit", submitForm);
-background.addEventListener("change", getColor, false);
+background.addEventListener("change", setBackgroundColor, false);
+textColor.addEventListener("change", setTextColor)
