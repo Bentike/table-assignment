@@ -5,6 +5,8 @@ const submit = document.getElementById("submit");
 const background = document.getElementById("bg");
 const textColor = document.getElementById("textColor");
 const width = document.getElementById("width");
+const settings = document.getElementsByClassName("set")[0];
+const settingsModal = document.getElementById("settings");
 
 let formData = new FormData(userForm);
 let geekForm = document.forms["users"];
@@ -22,6 +24,10 @@ const setWidth = (event) => {
    membersTable.style.width = event.target.value;   
 }
 
+const showSettings = () => {
+   settingsModal.style.display = "block";
+}
+
 const submitForm = (event) => {
     event.preventDefault();
     let data = new FormData(geekForm);
@@ -35,3 +41,4 @@ userForm.addEventListener("submit", submitForm);
 background.addEventListener("change", setBackgroundColor);
 textColor.addEventListener("change", setTextColor);
 width.addEventListener("change", setWidth);
+settings.addEventListener("click", showSettings);
