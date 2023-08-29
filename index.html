@@ -5,56 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GeekForce Members.</title>
     <style>
-        .container{
-            text-align: center;
-            width: 90%;
-            margin: 0 auto;
-        }
-        table{
-            width: 100%;
-            margin: 0 auto;
-        }
-     </style>
+      .container {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+      }
+      table {
+        width: 100%;
+        margin: 0 auto;
+      }
+      #settings{
+        /* display: none; */
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Fill In Your Data As A GeekForce Team Member.</h1>
-      <label for="bg"> change table background color: 
-         <input type="color" name="bg" id="bg">
-      </label>
-      <label for="textColor"> change table text color: 
-         <input type="color" name="textColor" id="textColor">
-      </label>
-      <label for="width"> change table text width: 
-         <select name="width" id="width">
-            <option >select size</option>
+      <div id="settings">
+        <label for="bg">
+          change table background color:
+          <input type="color" name="bg" id="bg" />
+        </label>
+        <br /><br />
+        <label for="textColor">
+          change table text color:
+          <input type="color" name="textColor" id="textColor" />
+        </label>
+        <br /><br />
+        <label for="width">
+          change table width:
+          <select name="width" id="width">
+            <option>select size</option>
             <option value="60%">Smaller</option>
             <option value="70%">Small</option>
             <option value="80%">Medium</option>
             <option value="90%">Big</option>
             <option value="100%">Bigger</option>
-         </select>
-      </label>
-      <br><br>
+          </select>
+        </label>
+      </div>
+      <br /><br />
       <form id="userForm" name="users">
         <label for="firstname">
-            <input type="text" name="firstname" id="firstname" placeholder="your firstname" required>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="your firstname"
+            required
+          />
         </label>
         <label for="lastname">
-            <input type="text" name="lastname" id="lastname" placeholder="your lastname" required>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="your lastname"
+            required
+          />
         </label>
         <label for="phone">
-            <input type="number" name="phone" id="phone" placeholder="your phone number" required>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="your phone number"
+            required
+          />
         </label>
         <label for="email">
-            <input type="email" name="email" id="email" placeholder="your email" required>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="your email"
+            required
+          />
         </label>
         <label for="location">
-            <input type="location" name="location" id="location" placeholder="your state/location" required>
+          <input
+            type="location"
+            name="location"
+            id="location"
+            placeholder="your state/location"
+            required
+          />
         </label>
         <button id="submit">Submit</button>
       </form>
-      <br><br>
+      <br /><br />
       <table border="2" id="membersList">
         <thead>
           <th>FirstName</th>
