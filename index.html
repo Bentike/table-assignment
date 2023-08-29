@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GeekForce Members.</title>
     <style>
+      *{
+        overflow: hidden;
+      }
       .container {
         text-align: center;
         width: 90%;
@@ -26,6 +29,15 @@
         background-color: aqua;
         color: red;
         font-size: 20px;
+      }
+      .set{
+         margin-left: -1050px;
+         cursor: pointer;
+         transition: all ease-in-out .3s;
+      }
+      .set:hover{
+        color: #eb0f0f;
+        scale: 1.1;
       }
     </style>
   </head>
@@ -55,7 +67,8 @@
           </select>
         </label>
       </div>
-      <br /><br />
+      <!-- <br /><br /> -->
+      <p class="set">settings</p>
       <form id="userForm" name="users">
         <label for="firstname">
           <input
