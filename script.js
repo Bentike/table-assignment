@@ -11,31 +11,33 @@ const settingsModal = document.getElementById("settings");
 let formData = new FormData(userForm);
 let geekForm = document.forms["users"];
 
-
 const setBackgroundColor = (event) => {
-    membersTable.style.backgroundColor = event.target.value;
-}
+  membersTable.style.backgroundColor = event.target.value;
+};
 
 const setTextColor = (event) => {
-    membersTable.style.color = event.target.value;
-}
+  membersTable.style.color = event.target.value;
+};
 
 const setWidth = (event) => {
-   membersTable.style.width = event.target.value;   
-}
+  membersTable.style.width = event.target.value;
+};
 
 const showSettings = () => {
-   settingsModal.classList.toggle("show")
-}
+  console.log(settingsModal.style.display);
+  settingsModal.style.display === "" || settingsModal.style.display === "none"
+    ? (settingsModal.style.display = "block")
+    : (settingsModal.style.display = "none");
+};
 
 const submitForm = (event) => {
-    event.preventDefault();
-    let data = new FormData(geekForm);
-    let newMemberRow = membersTable.insertRow();
-    for(let [key, value] of data){
-        newMemberRow.insertCell().innerHTML = data.get(key);
-    }
-}
+  event.preventDefault();
+  let data = new FormData(geekForm);
+  let newMemberRow = membersTable.insertRow();
+  for (let [key, value] of data) {
+    newMemberRow.insertCell().innerHTML = data.get(key);
+  }
+};
 
 userForm.addEventListener("submit", submitForm);
 background.addEventListener("change", setBackgroundColor);
