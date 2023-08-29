@@ -25,7 +25,7 @@ const setWidth = (event) => {
 }
 
 const showSettings = () => {
-   settingsModal.style.display = "block";
+   settingsModal.classList.toggle("show")
 }
 
 const submitForm = (event) => {
